@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import Layout from "../components/Layout/layout"
 import SEO from "../components/Seo/Seo"
+import Projects from "../components/Projects/Projects"
 
 const Section = styled.section`
   padding: ${({ big }) => (big ? "120px 0" : "60px 0")};
@@ -80,6 +81,7 @@ class IndexPage extends React.Component {
 
         <Section>
           <Heading size="medium">Some of my selected projects</Heading>
+          <Projects />
         </Section>
       </Layout>
     )
