@@ -1,6 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import Header from "../Header/Header"
+import { GlobalStyle } from "../../styles/global"
+import { Normalize } from "styled-normalize"
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -20,14 +23,19 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <Container>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </Container>
+      <React.Fragment>
+        <GlobalStyle />
+        <Normalize />
+        <Container>
+          <Header />
+          <main>{children}</main>
+          <footer>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </footer>
+        </Container>
+      </React.Fragment>
     )}
   />
 )
