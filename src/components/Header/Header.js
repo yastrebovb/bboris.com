@@ -6,7 +6,6 @@ import Menu from "../Menu/Menu"
 const HeaderWrapper = styled.header`
   display: flex;
   align-items: baseline;
-  padding: 16px 0;
 `
 
 const Header = () => (
