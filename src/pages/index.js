@@ -79,9 +79,9 @@ class IndexPage extends React.Component {
           <Email>hello@bboris.com</Email>
         </Section>
 
-        <Section>
+        <Section id="projects">
           <Heading size="medium">Some of my selected projects</Heading>
-          <Projects />
+          <Heading size="small">Coming soon ...</Heading>
         </Section>
       </Layout>
     )

@@ -7,7 +7,7 @@ const Projects = () => {
     <Tabs>
       <TabList>
         <Tab>All</Tab>
-        <Tab>React</Tab>
+        <Tab>Websites</Tab>
       </TabList>
 
       <TabPanel>

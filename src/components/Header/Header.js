@@ -20,16 +20,18 @@ const Menu = styled.nav`
   list-style-type: none;
 `
 
-const MenuItem = styled.a`
+const MenuItem = styled(Link)`
   margin-left: 20px;
+  color: initial;
   font-weight: 600;
+  text-decoration: none;
 `
 
 const Header = () => (
   <HeaderWrapper>
     <Logo>Yastrebov.</Logo>
     <Menu>
-      <MenuItem>Projects</MenuItem>
+      <MenuItem to="#projects">Projects</MenuItem>
       <MenuItem>About</MenuItem>
       <MenuItem>Contact</MenuItem>
     </Menu>
