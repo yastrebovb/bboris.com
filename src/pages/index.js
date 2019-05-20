@@ -6,34 +6,34 @@ import SEO from "../components/Seo/Seo"
 import Projects from "../components/Projects/Projects"
 
 const Section = styled.section`
-  padding: ${({ big }) => (big ? "120px 0" : "60px 0")};
+  padding: ${({ big }) => (big ? "12rem 0" : "6rem 0")};
 `
 
 const Heading = styled.h1`
   font-size: ${({ size }) =>
     size === "big"
-      ? "32px"
+      ? "3.2rem"
       : size === "medium"
-      ? "28px"
+      ? "2.8rem"
       : size === "small"
-      ? "24px"
+      ? "2.4rem"
       : null};
-  line-height: 44px;
+  line-height: 4.4rem;
   text-align: center;
 `
 
 const About = styled.p`
-  max-width: 730px;
+  max-width: 73rem;
   margin: 0 auto;
-  font-size: 17px;
+  font-size: 1.7rem;
   text-align: center;
-  line-height: 22px;
+  line-height: 2.2rem;
 `
 
 const Email = styled.a`
   display: block;
-  margin: 30px 0;
-  font-size: 18px;
+  margin: 3rem 0;
+  font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
   text-decoration: underline;

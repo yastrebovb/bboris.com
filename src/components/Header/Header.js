@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
-import styled from "styled-components"
 import Menu from "../Menu/Menu"
+import styled from "styled-components"
 
 const HeaderWrapper = styled.header`
   display: flex;

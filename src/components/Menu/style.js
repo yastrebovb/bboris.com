@@ -4,18 +4,20 @@ export const DesktopMenu = styled.nav`
   flex: 1 1 auto;
   display: flex;
   justify-content: flex-end;
-  padding: 38px 0;
+  padding: 3.8rem 0;
   list-style-type: none;
 `
 
 export const Logo = styled.p`
+  font-size: 1.6rem;
   font-weight: 600;
 `
 
 export const MenuItem = styled.a`
-  margin-left: 32px;
-  margin-bottom: ${({ mobile }) => (mobile ? "36px" : "initial")};
+  margin-left: 3.2rem;
+  margin-bottom: ${({ mobile }) => (mobile ? "3.6rem" : "initial")};
   color: ${({ mobile }) => (mobile ? "#ffffff" : "initial")};
+  font-size: 1.6rem;
   font-weight: 600;
   text-decoration: none;
 `
@@ -23,10 +25,10 @@ export const MenuItem = styled.a`
 export const StyledMobileMenu = styled.div`
   .bm-burger-button {
     position: fixed;
-    width: 30px;
-    height: 25px;
-    right: 32px;
-    top: 32px;
+    width: 3rem;
+    height: 2.5rem;
+    right: 3.2rem;
+    top: 3.2rem;
   }
 
   .bm-burger-bars {

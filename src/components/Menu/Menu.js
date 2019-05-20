@@ -35,7 +35,7 @@ class Menu extends Component {
   render() {
     const { width, isOpen } = this.state
 
-    if (width < 768) {
+    if (width < 1024) {
       return (
         <StyledMobileMenu>
           <MobileMenu
