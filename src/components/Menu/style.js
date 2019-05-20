@@ -17,7 +17,7 @@ export const MenuItem = styled.a`
   margin-left: 3.2rem;
   margin-bottom: ${({ mobile }) => (mobile ? "3.6rem" : "initial")};
   color: ${({ mobile }) => (mobile ? "#ffffff" : "initial")};
-  font-size: 1.6rem;
+  font-size: ${({ mobile }) => (mobile ? "2.1rem" : "1.6rem")};
   font-weight: 600;
   text-decoration: none;
 `
