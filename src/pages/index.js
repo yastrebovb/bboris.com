@@ -4,6 +4,8 @@ import styled from "styled-components"
 import Layout from "../components/Layout/layout"
 import SEO from "../components/Seo/Seo"
 import Projects from "../components/Projects/Projects"
+import Emoji from "../components/Emoji/Emoji"
+import { shakeHand } from "../styles/animations"
 
 const Section = styled.section`
   padding: ${({ big }) => (big ? "12rem 0" : "6rem 0")};
@@ -39,6 +41,12 @@ const Email = styled.a`
   text-decoration: underline;
 `
 
+const WaveEmoji = styled(Emoji)`
+  display: inline-block;
+  animation: ${shakeHand} 1.7s 0.5s ease-in-out;
+  transform-origin: 50% 90%;
+`
+
 class IndexPage extends React.Component {
   constructor(props) {
     super(props)
@@ -64,11 +72,10 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-
         <Section big>
           <Heading size="big">
-            Good {this.state.dateTime}! 👋 <br /> My name is Boris and I am
-            front-end developer.
+            Good {this.state.dateTime}! <WaveEmoji symbol="👋" label="wave" />
+            <br /> My name is Boris and I am front-end developer.
           </Heading>
           <About>
             I enjoy turning complex problems into simple, beautiful and
@@ -78,7 +85,6 @@ class IndexPage extends React.Component {
           </About>
           <Email>hello@bboris.com</Email>
         </Section>
-
         <Section id="projects">
           <Heading size="medium">Some of my selected projects</Heading>
           <Heading size="small">Coming soon ...</Heading>
