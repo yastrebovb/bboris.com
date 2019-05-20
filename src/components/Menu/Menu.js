@@ -4,7 +4,7 @@ import { DesktopMenu, Logo, MenuItem, StyledMobileMenu } from "./style"
 
 class Menu extends Component {
   state = {
-    width: window.screen.width,
+    width: window.innerWidth,
     isOpen: false,
   }
 
@@ -22,7 +22,7 @@ class Menu extends Component {
 
   updateDimensions = () => {
     this.setState({
-      width: window.screen.width,
+      width: window.innerWidth,
     })
   }
 

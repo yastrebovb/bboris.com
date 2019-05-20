@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 export const DesktopMenu = styled.nav`
@@ -13,7 +12,7 @@ export const Logo = styled.p`
   font-weight: 600;
 `
 
-export const MenuItem = styled(Link)`
+export const MenuItem = styled.a`
   margin-left: 32px;
   margin-bottom: ${({ mobile }) => (mobile ? "36px" : "initial")};
   color: ${({ mobile }) => (mobile ? "#ffffff" : "initial")};
