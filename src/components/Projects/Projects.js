@@ -1,14 +1,23 @@
 import React from "react"
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
+import styled from "styled-components"
 import "react-tabs/style/react-tabs.css"
+
+const StyledTabList = styled(TabList)`
+  display: block;
+  max-width: 20rem;
+  margin: 1rem auto;
+  font-size: 1.8rem;
+  font-weight: 500;
+`
 
 const Projects = () => {
   return (
     <Tabs>
-      <TabList>
+      <StyledTabList>
         <Tab>All</Tab>
         <Tab>Websites</Tab>
-      </TabList>
+      </StyledTabList>
 
       <TabPanel>
         <h2>Any content 1</h2>

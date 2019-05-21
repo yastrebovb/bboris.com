@@ -44,7 +44,7 @@ class IndexPage extends React.Component {
         </Section>
         <Section id="projects">
           <Heading size="medium">Some of my selected projects</Heading>
-          <Heading size="small">Coming soon ...</Heading>
+          <Projects />
         </Section>
       </Layout>
     )
