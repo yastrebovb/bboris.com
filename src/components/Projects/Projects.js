@@ -1,32 +1,40 @@
 import React from "react"
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
-import styled from "styled-components"
+import { Tab } from "react-tabs"
+import Project from "../Project/Project"
 import "react-tabs/style/react-tabs.css"
+import { StyledTabs, StyledTabList, ProjectsList } from "./style"
 
-const StyledTabList = styled(TabList)`
-  display: block;
-  max-width: 20rem;
-  margin: 1rem auto;
-  font-size: 1.8rem;
-  font-weight: 500;
-`
+class Projects extends React.Component {
+  state = {
+    projects: [
+      {
+        title: 'News Dashboard',
+        description: ''
+      }
+    ]
+  }
 
-const Projects = () => {
-  return (
-    <Tabs>
-      <StyledTabList>
-        <Tab>All</Tab>
-        <Tab>Websites</Tab>
-      </StyledTabList>
+  render() {
+    return (
+      <StyledTabs>
+        <StyledTabList>
+          <Tab>All</Tab>
+          <Tab>Websites</Tab>
+        </StyledTabList>
 
-      <TabPanel>
-        <h2>Any content 1</h2>
-      </TabPanel>
-      <TabPanel>
-        <h2>Any content 2</h2>
-      </TabPanel>
-    </Tabs>
-  )
+        <ProjectsList>
+          <Project title="News Dashboard" description="asdasd" link="a" />
+          <Project title="News Dashboard" description="asdasd" />
+          <Project title="News Dashboard" description="asdasd" />
+        </ProjectsList>
+        <ProjectsList>
+          <Project title="Websites" description="asdasd" />
+          <Project title="Websites " description="asdasd" />
+          <Project title="Websites " description="asdasd" />
+        </ProjectsList>
+      </StyledTabs>
+    )
+  }
 }
 
 export default Projects
