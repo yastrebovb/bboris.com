@@ -6,32 +6,41 @@ import { StyledTabs, StyledTabList, ProjectsList } from "./style"
 
 class Projects extends React.Component {
   state = {
+    categories: ["all", "websites", "tools"],
     projects: [
       {
-        title: 'News Dashboard',
-        description: ''
-      }
-    ]
+        title: "News Dashboard",
+        description: "a",
+        keywords: ["all", "websites"],
+        filename: "news-dashboard",
+        link: "https://redux-news-dashboard.herokuapp.com/",
+        code: "https://github.com/yastrebovb/news-dashboard",
+      },
+    ],
   }
 
   render() {
+    const { categories, projects } = this.state
+
+    const renderFilteredProjects = projects => {
+      return projects.map(project => <Project {...project} />)
+    }
+
     return (
       <StyledTabs>
         <StyledTabList>
-          <Tab>All</Tab>
-          <Tab>Websites</Tab>
+          {categories.map(category => (
+            <Tab key={category}>{category}</Tab>
+          ))}
         </StyledTabList>
 
-        <ProjectsList>
-          <Project title="News Dashboard" description="asdasd" link="a" />
-          <Project title="News Dashboard" description="asdasd" />
-          <Project title="News Dashboard" description="asdasd" />
-        </ProjectsList>
-        <ProjectsList>
-          <Project title="Websites" description="asdasd" />
-          <Project title="Websites " description="asdasd" />
-          <Project title="Websites " description="asdasd" />
-        </ProjectsList>
+        {categories.map(category => (
+          <ProjectsList>
+            {renderFilteredProjects(
+              projects.filter(project => project.keywords.includes(category))
+            )}
+          </ProjectsList>
+        ))}
       </StyledTabs>
     )
   }

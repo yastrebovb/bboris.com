@@ -2,6 +2,8 @@ import { Tabs, TabList, TabPanel } from "react-tabs"
 import styled from "styled-components"
 
 export const StyledTabs = styled(Tabs)`
+  text-transform: capitalize;
+
   .react-tabs__tab--selected {
     border: none;
     border-bottom: 0.25rem solid #000000;
