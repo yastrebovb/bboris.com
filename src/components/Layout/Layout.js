@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Header from "../Header/Header"
+import Footer from "../Footer/Footer"
 import { GlobalStyle } from "../../styles/global"
 import { Normalize } from "styled-normalize"
 import styled from "styled-components"
@@ -29,11 +30,7 @@ const Layout = ({ children }) => (
         <Container>
           <Header />
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <Footer />
         </Container>
       </React.Fragment>
     )}
