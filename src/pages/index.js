@@ -46,6 +46,9 @@ class IndexPage extends React.Component {
           <Heading size="medium">Some of my selected projects</Heading>
           <Projects />
         </Section>
+        <Section id="about">
+          <Heading size="medium">About</Heading>
+        </Section>
       </Layout>
     )
   }

@@ -19,10 +19,23 @@ const Title = styled.p`
   text-align: center;
 `
 
-const Description = styled.p`
+const Tools = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
   margin-top: 2rem;
   font-size: 1.6rem;
   text-transform: initial;
+`
+
+const Tool = styled.span`
+  margin: 4px;
+  padding: 4px 8px;
+  background-color: rgba(255, 204, 51, 0.6);
+  border-radius: 4px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: lowercase;
 `
 
 const Links = styled.div`
@@ -36,15 +49,19 @@ const Link = styled.a`
   font-size: 1.6rem;
 `
 
-const Project = ({ title, description, link, code, filename }) => (
+const Project = ({ title, tools, link, code, filename }) => (
   <ProjectStyled>
     <Title>{title}</Title>
     <Image filename={filename} />
-    <Description>{description}</Description>
+    <Tools>
+      {tools.map(tool => (
+        <Tool>{tool}</Tool>
+      ))}
+    </Tools>
     <Links>
       {link && (
         <Link href={link} target="_blank">
-          Demo
+          Visit
         </Link>
       )}
       {code && (

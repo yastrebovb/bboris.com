@@ -10,25 +10,24 @@ class Projects extends React.Component {
     projects: [
       {
         title: "News Dashboard",
-        description: "News dashboard application.",
         keywords: ["all"],
+        tools: ["React", "Redux", "Redux-thunk", "Styled-components", "Heroku"],
         filename: "news.png",
         link: "https://redux-news-dashboard.herokuapp.com/",
         code: "https://github.com/yastrebovb/news-dashboard",
       },
       {
         title: "Split Bill app",
-        description: "test",
         keywords: ["all"],
+        tools: ["React", "Redux", "Jest", "Styled-components", "Github Pages"],
         filename: "split.png",
         link: "https://yastrebovb.github.io/split-bill/",
         code: "https://github.com/yastrebovb/split-bill",
       },
       {
         title: "Website for a wholesale company",
-        description:
-          "Website for a wholesaly company built with SCSS, Pug, JavaScript. Handled by custom webpack cofig.",
         keywords: ["all", "websites"],
+        tools: ["Pug", "SCSS", "Webpack", "JavaScript"],
         filename: "bellababy.png",
         link: "https://bellababy.ru/",
         code: "https://github.com/yastrebovb/bellababy",
