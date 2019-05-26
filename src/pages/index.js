@@ -2,7 +2,15 @@ import React from "react"
 import Layout from "../components/Layout/layout"
 import SEO from "../components/Seo/Seo"
 import Projects from "../components/Projects/Projects"
-import { Section, Heading, About, Email, WaveEmoji } from "../styles/pages/"
+import Image from "../components/Image/Image"
+import {
+  Section,
+  Heading,
+  Text,
+  Email,
+  ProfileWrapper,
+  WaveEmoji,
+} from "../styles/pages/"
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -34,12 +42,12 @@ class IndexPage extends React.Component {
             Good {this.state.dateTime}! <WaveEmoji symbol="👋" label="wave" />
             <br /> My name is Boris and I am front-end developer.
           </Heading>
-          <About>
+          <Text maxWidth="76rem" margin="0 auto" textAlign="center">
             I enjoy turning complex problems into simple, beautiful and
             intuitive interfaces. When I'm not coding or learning new stuff,
             you'll find me searching what to build next, trying to design
             something or working out in the park.
-          </About>
+          </Text>
           <Email>hello@bboris.com</Email>
         </Section>
         <Section id="projects">
@@ -48,6 +56,28 @@ class IndexPage extends React.Component {
         </Section>
         <Section id="about">
           <Heading size="medium">About</Heading>
+          <Text maxWidth="70rem" margin="0 auto">
+            I’m a Front-end Developer based in Moscow.
+            <br />
+            <br />
+            I had my first introduction to Computer Science back in June 2016
+            when my schoolmate suggested taking an "Introduction to Programming"
+            course with him at the BMSTU university. That's how my journey
+            began.
+            <br />
+            <br />
+            Discovering Web-Development a few weeks later was absolutely
+            life-changing for me, I was amazed by the powerfulness and variety
+            of things which can be built and accessed by millions of people just
+            by typing a URL in their browser. I’m interested in the whole visual
+            part of the web and its usability, performance, and accessibility.
+          </Text>
+          <ProfileWrapper>
+            <Image filename="profile.jpg" />
+            <Text margin="0" size="1.2rem" textAlign="center">
+              Hey there! That's me
+            </Text>
+          </ProfileWrapper>
         </Section>
       </Layout>
     )

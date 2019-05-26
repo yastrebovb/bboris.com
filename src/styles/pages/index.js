@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Image from "../../components/Image/Image"
 import Emoji from "../../components/Emoji/Emoji"
 import { shakeHand } from "../animations"
 
@@ -19,12 +20,17 @@ export const Heading = styled.h1`
   text-align: center;
 `
 
-export const About = styled.p`
-  max-width: 73rem;
-  margin: 0 auto;
-  font-size: 1.7rem;
-  text-align: center;
+export const Text = styled.p.attrs(({ maxWidth, margin, size, textAlign }) => ({
+  maxWidth: maxWidth || "100%",
+  margin: margin || "1rem 0",
+  size: size || "1.7rem",
+  textAlign: textAlign || "initial",
+}))`
+  max-width: ${({ maxWidth }) => maxWidth};
+  margin: ${({ margin }) => margin};
+  font-size: ${({ size }) => size};
   line-height: 2.2rem;
+  text-align: ${({ textAlign }) => textAlign};
 `
 
 export const Email = styled.a`
@@ -34,6 +40,11 @@ export const Email = styled.a`
   font-weight: 600;
   text-align: center;
   text-decoration: underline;
+`
+
+export const ProfileWrapper = styled.div`
+  max-width: 25rem;
+  margin: 4rem auto;
 `
 
 export const WaveEmoji = styled(Emoji)`
