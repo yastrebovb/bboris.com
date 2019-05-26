@@ -1,4 +1,5 @@
 import React from "react"
+import Emoji from "../Emoji/Emoji"
 import styled from "styled-components"
 
 const FooterWrapper = styled.footer`
@@ -13,7 +14,10 @@ const Copyright = styled.p`
 
 const Footer = () => (
   <FooterWrapper>
-    <Copyright>© {new Date().getFullYear()}, Boris Yastrebov</Copyright>
+    <Copyright>
+      © {new Date().getFullYear()}, Boris Yastrebov{" "}
+      <Emoji symbol="👨‍💻" label="man-technologist" />
+    </Copyright>
   </FooterWrapper>
 )
 
