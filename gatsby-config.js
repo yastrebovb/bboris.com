@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Boris Yastrebov - Front-end developer`,
-    description: `Boris Yastrebov - front-end developer`,
+    title: `Boris Yastrebov – Front-end developer`,
+    description: `Boris Yastrebov – front-end developer`,
     author: `@yastrebovb`,
   },
   plugins: [
