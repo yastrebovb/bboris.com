@@ -11,10 +11,26 @@ class Projects extends React.Component {
       {
         title: "News Dashboard",
         description: "a",
-        keywords: ["all", "websites"],
-        filename: "news-dashboard",
+        keywords: ["all"],
+        filename: "news.png",
         link: "https://redux-news-dashboard.herokuapp.com/",
         code: "https://github.com/yastrebovb/news-dashboard",
+      },
+      {
+        title: "Split Bill app",
+        description: "",
+        keywords: ["all"],
+        filename: "split.png",
+        link: "https://yastrebovb.github.io/split-bill/",
+        code: "https://github.com/yastrebovb/split-bill",
+      },
+      {
+        title: "Website for a wholesale company",
+        description: "",
+        keywords: ["all", "websites"],
+        filename: "bellababy.png",
+        link: "https://bellababy.ru/",
+        code: "https://github.com/yastrebovb/bellababy",
       },
     ],
   }

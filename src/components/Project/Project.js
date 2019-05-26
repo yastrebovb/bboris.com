@@ -13,8 +13,9 @@ const ProjectStyled = styled.article`
 `
 
 const Title = styled.p`
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 500;
+  text-align: center;
 `
 
 const Description = styled.p`
@@ -23,7 +24,7 @@ const Description = styled.p`
 
 const Links = styled.div`
   display: flex;
-  margin-top: auto;
+  margin: auto auto 0 auto;
 `
 
 const Link = styled.a`
