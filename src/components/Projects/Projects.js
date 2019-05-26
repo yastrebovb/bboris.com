@@ -10,7 +10,7 @@ class Projects extends React.Component {
     projects: [
       {
         title: "News Dashboard",
-        description: "a",
+        description: "News dashboard application.",
         keywords: ["all"],
         filename: "news.png",
         link: "https://redux-news-dashboard.herokuapp.com/",
@@ -18,7 +18,7 @@ class Projects extends React.Component {
       },
       {
         title: "Split Bill app",
-        description: "",
+        description: "test",
         keywords: ["all"],
         filename: "split.png",
         link: "https://yastrebovb.github.io/split-bill/",
@@ -26,7 +26,8 @@ class Projects extends React.Component {
       },
       {
         title: "Website for a wholesale company",
-        description: "",
+        description:
+          "Website for a wholesaly company built with SCSS, Pug, JavaScript. Handled by custom webpack cofig.",
         keywords: ["all", "websites"],
         filename: "bellababy.png",
         link: "https://bellababy.ru/",

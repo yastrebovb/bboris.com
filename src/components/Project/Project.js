@@ -13,13 +13,16 @@ const ProjectStyled = styled.article`
 `
 
 const Title = styled.p`
+  margin-bottom: 2rem;
   font-size: 1.6rem;
   font-weight: 500;
   text-align: center;
 `
 
 const Description = styled.p`
+  margin-top: 2rem;
   font-size: 1.6rem;
+  text-transform: initial;
 `
 
 const Links = styled.div`
