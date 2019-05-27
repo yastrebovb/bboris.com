@@ -33,6 +33,34 @@ export const Text = styled.p.attrs(({ maxWidth, margin, size, textAlign }) => ({
   text-align: ${({ textAlign }) => textAlign};
 `
 
+export const StyledLink = styled.a`
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
+export const List = styled.ul`
+  max-width: 50rem;
+  margin: 0 auto;
+  padding-left: 0;
+  list-style-type: none;
+`
+
+export const ListItem = styled.li`
+  display: inline-flex;
+  align-items: center;
+  margin: 2rem;
+
+  svg {
+    margin-right: 1rem;
+  }
+`
+
 export const Email = styled.a`
   display: block;
   margin: 3rem 0;

@@ -2,12 +2,17 @@ import React from "react"
 import Layout from "../components/Layout/layout"
 import SEO from "../components/Seo/Seo"
 import Projects from "../components/Projects/Projects"
+import Form from "../components/Form/Form"
 import Image from "../components/Image/Image"
+import { Codepen, Github, Twitter } from "../styles/icons"
 import {
   Section,
   Heading,
   Text,
+  List,
+  ListItem,
   Email,
+  StyledLink,
   ProfileWrapper,
   WaveEmoji,
 } from "../styles/pages/"
@@ -78,6 +83,24 @@ class IndexPage extends React.Component {
               Hey there! That's me
             </Text>
           </ProfileWrapper>
+        </Section>
+        <Section id="contact">
+          <Heading size="medium">Contact</Heading>
+          <List>
+            <ListItem>
+              <Codepen />
+              <StyledLink href="">Codepen</StyledLink>
+            </ListItem>
+            <ListItem>
+              <Github />
+              <StyledLink href="">GitHub</StyledLink>
+            </ListItem>
+            <ListItem>
+              <Twitter />
+              <StyledLink href="">Twitter</StyledLink>
+            </ListItem>
+          </List>
+          <Form />
         </Section>
       </Layout>
     )
