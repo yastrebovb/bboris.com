@@ -21,5 +21,5 @@ export const StyledTabList = styled(TabList)`
 export const ProjectsList = styled(TabPanel)`
   display: flex !important;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 `

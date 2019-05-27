@@ -6,12 +6,19 @@ import { StyledTabs, StyledTabList, ProjectsList } from "./style"
 
 class Projects extends React.Component {
   state = {
-    categories: ["all", "websites", "tools"],
+    categories: ["all", "websites"],
     projects: [
       {
         title: "News Dashboard",
         keywords: ["all"],
-        tools: ["React", "Redux", "Redux-thunk", "Styled-components", "Heroku"],
+        tools: [
+          "React",
+          "Redux",
+          "Redux-thunk",
+          "Styled-components",
+          "Heroku",
+          "api",
+        ],
         filename: "news.png",
         link: "https://redux-news-dashboard.herokuapp.com/",
         code: "https://github.com/yastrebovb/news-dashboard",
@@ -38,6 +45,14 @@ class Projects extends React.Component {
         filename: "split.png",
         link: "https://yastrebovb.github.io/split-bill/",
         code: "https://github.com/yastrebovb/split-bill",
+      },
+      {
+        title: "Forbes List app",
+        keywords: ["all"],
+        tools: ["React", "SCSS", "HTML", "API"],
+        filename: "forbes.png",
+        link: "https://codepen.io/yastrebov/full/axboJg",
+        code: "https://codepen.io/yastrebov/pen/axboJg",
       },
     ],
   }
