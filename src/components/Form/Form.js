@@ -41,6 +41,7 @@ const Submit = styled(Input)`
 
   &:hover {
     transform: translateY(-6px);
+    border-color: rgb(255, 204, 51);
   }
 `
 
@@ -111,7 +112,7 @@ class Form extends Component {
           value={userMessage}
           onChange={handleInput}
         />
-        <Submit type="submit" value="Send" />
+        <Submit type="submit" value="Send ✉️" />
       </FormStyled>
     )
   }
