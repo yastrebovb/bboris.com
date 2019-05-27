@@ -7,6 +7,7 @@ const ProjectStyled = styled.article`
   flex-direction: column;
   width: 35rem;
   min-height: 40rem;
+  margin: 1.5rem 0;
   padding: 2rem 3rem;
   border-radius: 0.4rem;
   box-shadow: 0.1rem 0.1rem 0.3rem 0.2rem rgba(0, 0, 0, 0.05);
