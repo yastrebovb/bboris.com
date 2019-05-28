@@ -54,6 +54,9 @@ export const StyledLink = styled.a`
 `
 
 export const List = styled.ul`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   max-width: 62rem;
   margin: 0 auto;
   padding-left: 0;
@@ -68,6 +71,10 @@ export const ListItem = styled.li`
   svg {
     margin-right: 1rem;
   }
+
+  ${media.phone`
+    margin: .5rem;
+  `}
 `
 
 export const Email = styled.a`

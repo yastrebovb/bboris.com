@@ -88,6 +88,7 @@ class IndexPage extends React.Component {
         </Section>
         <Section id="contact">
           <Heading size="medium">Contact</Heading>
+          <Form />
           <List>
             <ListItem>
               <Codepen />
@@ -117,7 +118,6 @@ class IndexPage extends React.Component {
               </StyledLink>
             </ListItem>
           </List>
-          <Form />
         </Section>
       </Layout>
     )
