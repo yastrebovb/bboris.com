@@ -4,12 +4,13 @@ import { DesktopMenu, Logo, MenuItem, StyledMobileMenu } from "./style"
 
 class Menu extends Component {
   state = {
-    width: window.innerWidth,
+    width: "",
     isOpen: false,
   }
 
   componentDidMount() {
     window.addEventListener("resize", this.updateDimensions)
+    this.setState({ width: window.innerWidth })
   }
 
   componentWillUnmount() {
