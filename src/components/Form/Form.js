@@ -30,7 +30,7 @@ class Form extends Component {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        contact: form.getAttribute("name"),
+        "form-name": form.getAttribute("name"),
         ...this.state,
       }),
     })
@@ -77,10 +77,8 @@ class Form extends Component {
 
     return (
       <FormStyled
-        form-name="contact"
         name="contact"
         method="post"
-        action="#"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}
@@ -115,7 +113,6 @@ class Form extends Component {
           onChange={handleInput}
         />
         {getSubmitBtn()}
-        <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
       </FormStyled>
     )
