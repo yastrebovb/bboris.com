@@ -67,7 +67,7 @@ export const StyledLink = styled.a`
 export const List = styled.ul`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   max-width: 62rem;
   margin: 3rem auto;
   padding-left: 0;
@@ -82,10 +82,6 @@ export const ListItem = styled.li`
   svg {
     margin-right: 1rem;
   }
-
-  ${media.phone`
-    margin: .5rem;
-  `}
 `
 
 export const Email = styled.a`
