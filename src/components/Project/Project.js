@@ -55,8 +55,8 @@ const Project = ({ title, tools, link, code, filename }) => (
     <Title>{title}</Title>
     <Image filename={filename} />
     <Tools>
-      {tools.map(tool => (
-        <Tool>{tool}</Tool>
+      {tools.map((tool, i) => (
+        <Tool key={i}>{tool}</Tool>
       ))}
     </Tools>
     <Links>
