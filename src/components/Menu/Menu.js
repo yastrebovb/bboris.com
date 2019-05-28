@@ -43,17 +43,13 @@ class Menu extends Component {
             isOpen={isOpen}
             onStateChange={state => this.handleStateChange(state)}
           >
-            <MenuItem
-              to="#projects"
-              mobile={"true"}
-              onClick={() => this.closeMenu()}
-            >
+            <MenuItem href="#projects" mobile={"true"} onClick={this.closeMenu}>
               Projects
             </MenuItem>
-            <MenuItem to="#about" mobile={"true"}>
+            <MenuItem href="#about" mobile={"true"} onClick={this.closeMenu}>
               About
             </MenuItem>
-            <MenuItem to="#concat" mobile={"true"}>
+            <MenuItem href="#contact" mobile={"true"} onClick={this.closeMenu}>
               Contact
             </MenuItem>
           </MobileMenu>
@@ -64,9 +60,9 @@ class Menu extends Component {
         <React.Fragment>
           <Logo>Yastrebov.</Logo>
           <DesktopMenu>
-            <MenuItem to="#projects">Projects</MenuItem>
-            <MenuItem>About</MenuItem>
-            <MenuItem>Contact</MenuItem>
+            <MenuItem href="#projects">Projects</MenuItem>
+            <MenuItem href="#about">About</MenuItem>
+            <MenuItem href="#contact">Contact</MenuItem>
           </DesktopMenu>
         </React.Fragment>
       )

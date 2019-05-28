@@ -50,8 +50,8 @@ class IndexPage extends React.Component {
           <Text maxWidth="76rem" margin="0 auto" textAlign="center">
             I enjoy turning complex problems into simple, beautiful and
             intuitive interfaces. When I'm not coding or learning new stuff,
-            you'll find me searching what to build next, trying to design
-            something or working out in the park.
+            you'll find me searching what to build next, trying to do some
+            design or working out in the park.
           </Text>
           <Email>hello@bboris.com</Email>
         </Section>
