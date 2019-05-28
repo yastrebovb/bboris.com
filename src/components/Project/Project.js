@@ -15,7 +15,7 @@ const ProjectStyled = styled.article`
 
 const Title = styled.p`
   margin-bottom: 2rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 500;
   text-align: center;
 `
@@ -24,7 +24,7 @@ const Tools = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  margin-top: 2rem;
+  margin: 2rem 0 3rem;
   font-size: 1.6rem;
   text-transform: initial;
 `
@@ -55,8 +55,8 @@ const Project = ({ title, tools, link, code, filename }) => (
     <Title>{title}</Title>
     <Image filename={filename} />
     <Tools>
-      {tools.map(tool => (
-        <Tool>{tool}</Tool>
+      {tools.map((tool, i) => (
+        <Tool key={i}>{tool}</Tool>
       ))}
     </Tools>
     <Links>

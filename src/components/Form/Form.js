@@ -1,88 +1,83 @@
 import React, { Component } from "react"
-import styled from "styled-components"
+import "whatwg-fetch"
+import { FormStyled, Label, Input, Submit, TextArea } from "./style"
 
-const FormStyled = styled.form`
-  display: flex;
-  flex-direction: column;
-  max-width: 64rem;
-  margin: 2rem auto;
-  font-size: 1.7rem;
-`
-
-const Label = styled.label`
-  font-size: 1.7rem;
-  font-weight: 500;
-`
-
-const Input = styled.input`
-  margin: 2rem 0;
-  padding: 0.5rem 0.25rem;
-  border: none;
-  border-bottom: 1.5px solid #000;
-  transition: all 0.1s linear;
-
-  &:active,
-  &:focus {
-    border-color: rgb(255, 204, 51);
-    outline: 0;
-  }
-`
-
-const Submit = styled(Input)`
-  width: 20rem;
-  margin: 4rem auto;
-  padding: 1.2rem 1rem;
-  border: 1.5px solid #000;
-  border-radius: 6px;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: all 0.2s linear;
-  cursor: pointer;
-
-  &:hover {
-    transform: translateY(-6px);
-    border-color: rgb(255, 204, 51);
-  }
-`
-
-const TextArea = styled.textarea`
-  margin: 2rem 0;
-  padding: 0.5rem 0.25rem;
-  border: none;
-  border-bottom: 1.5px solid #000;
-
-  &:active,
-  &:focus {
-    border-color: rgba(255, 204, 51, 0.6);
-    outline: 0;
-  }
-`
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 
 class Form extends Component {
   state = {
     userName: "",
     userEmail: "",
     userMessage: "",
+    status: undefined,
   }
 
   handleInput = e => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    })
+    if (this.state.status !== "success") {
+      this.setState({
+        [e.target.name]: e.target.value,
+      })
+    }
   }
 
   handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state }),
+    })
+      .then(() =>
+        this.setState({
+          status: "success",
+        })
+      )
+      .catch(err => {
+        this.setState({
+          status: "error",
+        })
+
+        console.error(err)
+      })
+
     e.preventDefault()
   }
 
   render() {
     const {
       handleInput,
-      state: { userName, userEmail, userMessage },
+      state: { userName, userEmail, userMessage, status },
     } = this
 
+    const getSubmitBtn = () => {
+      if (status === undefined) {
+        return <Submit type="submit" value="Send ✉️" />
+      } else if (status === "error") {
+        return (
+          <Submit type="submit" value="Try again ❌" borderColor="#ff5252" />
+        )
+      } else if (status === "success") {
+        return (
+          <Submit
+            type="submit"
+            value="Sent 📮"
+            borderColor="#ffcc33"
+            disabled
+          />
+        )
+      }
+    }
+
     return (
-      <FormStyled onSubmit={this.handleSubmit}>
+      <FormStyled
+        onSubmit={this.handleSubmit}
+        method="post"
+        name="contact-form"
+        data-netlify="true"
+      >
         <Label htmlFor="userName">Name</Label>
         <Input
           type="text"
@@ -112,7 +107,7 @@ class Form extends Component {
           value={userMessage}
           onChange={handleInput}
         />
-        <Submit type="submit" value="Send ✉️" />
+        {getSubmitBtn()}
       </FormStyled>
     )
   }

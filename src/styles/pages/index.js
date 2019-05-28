@@ -1,9 +1,15 @@
 import styled from "styled-components"
+import { media } from "../templates/index"
 import Emoji from "../../components/Emoji/Emoji"
-import { shakeHand } from "../animations"
+import { shakeHand, growWidth } from "../animations"
 
 export const Section = styled.section`
-  padding: ${({ big }) => (big ? "12rem 0" : "6rem 0")};
+  padding: ${({ big }) => (big ? "12rem 1rem" : "6rem 1rem")};
+
+  ${media.phone`
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  `}
 `
 
 export const Heading = styled.h1`
@@ -30,22 +36,46 @@ export const Text = styled.p.attrs(({ maxWidth, margin, size, textAlign }) => ({
   font-size: ${({ size }) => size};
   line-height: 2.2rem;
   text-align: ${({ textAlign }) => textAlign};
+
+  ${media.phone`
+    text-align: center;
+  `}
 `
 
 export const StyledLink = styled.a`
+  position: relative;
   font-size: 1.8rem;
   font-weight: 500;
   text-decoration: none;
   color: inherit;
 
-  &:hover {
-    text-decoration: underline;
+  &:after {
+    display: none;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(255, 204, 51);
+    animation: ${growWidth} 0.15s linear;
+    transition: all 0.2s linear;
+    content: "";
+  }
+
+  &:hover,
+  &:focus {
+    &:after {
+      display: block;
+    }
   }
 `
 
 export const List = styled.ul`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
   max-width: 62rem;
-  margin: 0 auto;
+  margin: 3rem auto;
   padding-left: 0;
   list-style-type: none;
 `
@@ -60,13 +90,30 @@ export const ListItem = styled.li`
   }
 `
 
-export const Email = styled.a`
+export const Email = styled(StyledLink)`
+  position: relative;
   display: block;
   margin: 3rem 0;
   font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
-  text-decoration: underline;
+
+  &:after {
+    display: block;
+    width: 16.5rem;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    margin: 0 auto;
+    background: #000;
+    animation: none;
+  }
+
+  &:hover {
+    &:after {
+      background: rgb(255, 204, 51);
+    }
+  }
 `
 
 export const ProfileWrapper = styled.div`

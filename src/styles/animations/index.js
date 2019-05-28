@@ -13,3 +13,9 @@ export const shakeHand = keyframes`
     transform: rotate(-25deg);
   }
 `
+
+export const growWidth = keyframes`
+  from {
+    width: 0;
+  }
+`

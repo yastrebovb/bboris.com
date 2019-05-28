@@ -61,7 +61,9 @@ class Projects extends React.Component {
     const { categories, projects } = this.state
 
     const renderFilteredProjects = projects => {
-      return projects.map(project => <Project {...project} />)
+      return projects.map(project => (
+        <Project key={project.filename} {...project} />
+      ))
     }
 
     return (
@@ -73,7 +75,7 @@ class Projects extends React.Component {
         </StyledTabList>
 
         {categories.map(category => (
-          <ProjectsList>
+          <ProjectsList key={category}>
             {renderFilteredProjects(
               projects.filter(project => project.keywords.includes(category))
             )}

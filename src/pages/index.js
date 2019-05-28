@@ -18,12 +18,14 @@ import {
 } from "../styles/pages/"
 
 class IndexPage extends React.Component {
-  constructor(props) {
-    super(props)
+  state = {
+    dateTime: "",
+  }
 
-    this.state = {
+  componentDidMount() {
+    this.setState({
       dateTime: this.getCurrentDateTime(),
-    }
+    })
   }
 
   getCurrentDateTime = () => {
@@ -42,7 +44,7 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO title="1" keywords={[`gatsby`, `application`, `react`]} />
-        <Section big>
+        <Section id="home" big>
           <Heading size="big">
             Good {this.state.dateTime}! <WaveEmoji symbol="👋" label="wave" />
             <br /> My name is Boris and I am front-end developer.
@@ -53,7 +55,9 @@ class IndexPage extends React.Component {
             you'll find me searching what to build next, trying to do some
             design or working out in the park.
           </Text>
-          <Email>hello@bboris.com</Email>
+          <Email href="mailto:hello@bboris.com?subject=Hey Boris!👋">
+            hello@bboris.com
+          </Email>
         </Section>
         <Section id="projects">
           <Heading size="medium">Some of my selected projects</Heading>
@@ -86,6 +90,7 @@ class IndexPage extends React.Component {
         </Section>
         <Section id="contact">
           <Heading size="medium">Contact</Heading>
+          <Form />
           <List>
             <ListItem>
               <Codepen />
@@ -115,7 +120,6 @@ class IndexPage extends React.Component {
               </StyledLink>
             </ListItem>
           </List>
-          <Form />
         </Section>
       </Layout>
     )

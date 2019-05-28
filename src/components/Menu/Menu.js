@@ -1,6 +1,12 @@
 import React, { Component } from "react"
 import { slide as MobileMenu } from "react-burger-menu"
-import { DesktopMenu, Logo, MenuItem, StyledMobileMenu } from "./style"
+import {
+  DesktopMenu,
+  Logo,
+  MenuItem,
+  StyledLink,
+  StyledMobileMenu,
+} from "./style"
 
 class Menu extends Component {
   state = {
@@ -44,6 +50,9 @@ class Menu extends Component {
             isOpen={isOpen}
             onStateChange={state => this.handleStateChange(state)}
           >
+            <MenuItem href="#home" mobile={"true"} onClick={this.closeMenu}>
+              Home
+            </MenuItem>
             <MenuItem href="#projects" mobile={"true"} onClick={this.closeMenu}>
               Projects
             </MenuItem>
@@ -53,6 +62,12 @@ class Menu extends Component {
             <MenuItem href="#contact" mobile={"true"} onClick={this.closeMenu}>
               Contact
             </MenuItem>
+            <StyledLink
+              href="mailto:hello@bboris.com?subject=Hey Boris!👋"
+              onClick={this.closeMenu}
+            >
+              hello@bboris.com
+            </StyledLink>
           </MobileMenu>
         </StyledMobileMenu>
       )
