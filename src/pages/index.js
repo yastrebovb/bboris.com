@@ -44,7 +44,7 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO title="1" keywords={[`gatsby`, `application`, `react`]} />
-        <Section big>
+        <Section id="home" big>
           <Heading size="big">
             Good {this.state.dateTime}! <WaveEmoji symbol="👋" label="wave" />
             <br /> My name is Boris and I am front-end developer.

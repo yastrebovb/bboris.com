@@ -38,6 +38,19 @@ export const MenuItem = styled.a`
   }
 `
 
+export const StyledLink = styled.a`
+  margin-top: auto;
+  margin-left: 4rem;
+  font-size: 2.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
 export const StyledMobileMenu = styled.div`
   .bm-burger-button {
     position: fixed;
@@ -45,6 +58,7 @@ export const StyledMobileMenu = styled.div`
     height: 2.5rem;
     right: 3.2rem;
     top: 3.2rem;
+    background-color: #fff;
   }
 
   .bm-burger-bars {
@@ -68,10 +82,23 @@ export const StyledMobileMenu = styled.div`
     background: #bdc3c7;
   }
 
+  .bm-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bm-item-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 60rem !important;
+    margin: auto 0;
+  }
+
   /*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
   .bm-menu-wrap {
     position: fixed;
     height: 100%;
