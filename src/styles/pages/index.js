@@ -1,9 +1,15 @@
 import styled from "styled-components"
+import { media } from "../templates/index"
 import Emoji from "../../components/Emoji/Emoji"
 import { shakeHand } from "../animations"
 
 export const Section = styled.section`
-  padding: ${({ big }) => (big ? "12rem 0" : "6rem 0")};
+  padding: ${({ big }) => (big ? "12rem 1rem" : "6rem 1rem")};
+
+  ${media.phone`
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  `}
 `
 
 export const Heading = styled.h1`
@@ -30,6 +36,10 @@ export const Text = styled.p.attrs(({ maxWidth, margin, size, textAlign }) => ({
   font-size: ${({ size }) => size};
   line-height: 2.2rem;
   text-align: ${({ textAlign }) => textAlign};
+
+  ${media.phone`
+    text-align: center;
+  `}
 `
 
 export const StyledLink = styled.a`
