@@ -3,11 +3,11 @@ import Emoji from "../Emoji/Emoji"
 import styled from "styled-components"
 
 const FooterWrapper = styled.footer`
-  padding: 2rem 0;
+  padding: 2.5rem 0;
 `
 
 const Copyright = styled.p`
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: 500;
   text-align: center;
 `

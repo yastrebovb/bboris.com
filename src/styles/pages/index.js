@@ -69,7 +69,7 @@ export const List = styled.ul`
   flex-flow: row wrap;
   justify-content: space-between;
   max-width: 62rem;
-  margin: 0 auto;
+  margin: 3rem auto;
   padding-left: 0;
   list-style-type: none;
 `

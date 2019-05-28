@@ -24,7 +24,7 @@ const Tools = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  margin-top: 2rem;
+  margin: 2rem 0 3rem;
   font-size: 1.6rem;
   text-transform: initial;
 `
