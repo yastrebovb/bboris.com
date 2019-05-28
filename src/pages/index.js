@@ -4,7 +4,7 @@ import SEO from "../components/Seo/Seo"
 import Projects from "../components/Projects/Projects"
 import Form from "../components/Form/Form"
 import Image from "../components/Image/Image"
-import { Codepen, Github, Twitter } from "../styles/icons"
+import { Codepen, Github, Twitter, Mail } from "../styles/icons"
 import {
   Section,
   Heading,
@@ -89,15 +89,30 @@ class IndexPage extends React.Component {
           <List>
             <ListItem>
               <Codepen />
-              <StyledLink href="">Codepen</StyledLink>
+              <StyledLink href="https://codepen.io/yastrebov/" target="_blank">
+                Codepen
+              </StyledLink>
             </ListItem>
             <ListItem>
               <Github />
-              <StyledLink href="">GitHub</StyledLink>
+              <StyledLink href="https://github.com/yastrebovb" target="_blank">
+                GitHub
+              </StyledLink>
             </ListItem>
             <ListItem>
               <Twitter />
-              <StyledLink href="">Twitter</StyledLink>
+              <StyledLink
+                href="https://twitter.com/yastrebovb?lang=en"
+                target="_blank"
+              >
+                Twitter
+              </StyledLink>
+            </ListItem>
+            <ListItem>
+              <Mail />
+              <StyledLink href="https://twitter.com/yastrebovb?lang=en">
+                E-mail
+              </StyledLink>
             </ListItem>
           </List>
           <Form />

@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import Image from "../../components/Image/Image"
 import Emoji from "../../components/Emoji/Emoji"
 import { shakeHand } from "../animations"
 
@@ -45,7 +44,7 @@ export const StyledLink = styled.a`
 `
 
 export const List = styled.ul`
-  max-width: 50rem;
+  max-width: 62rem;
   margin: 0 auto;
   padding-left: 0;
   list-style-type: none;
