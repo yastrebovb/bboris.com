@@ -18,12 +18,14 @@ import {
 } from "../styles/pages/"
 
 class IndexPage extends React.Component {
-  constructor(props) {
-    super(props)
+  state = {
+    dateTime: "",
+  }
 
-    this.state = {
+  componentDidMount() {
+    this.setState({
       dateTime: this.getCurrentDateTime(),
-    }
+    })
   }
 
   getCurrentDateTime = () => {
