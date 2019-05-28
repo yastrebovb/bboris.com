@@ -74,7 +74,7 @@ class Form extends Component {
       <FormStyled
         onSubmit={this.handleSubmit}
         method="post"
-        name="contact-form"
+        name="c-form"
         data-netlify="true"
       >
         <Label htmlFor="userName">Name</Label>
@@ -106,6 +106,7 @@ class Form extends Component {
           value={userMessage}
           onChange={handleInput}
         />
+        <input type="hidden" name="contact-form" value="contact-form" />
         {getSubmitBtn()}
       </FormStyled>
     )

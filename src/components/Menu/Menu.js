@@ -10,7 +10,7 @@ import {
 
 class Menu extends Component {
   state = {
-    width: "",
+    width: 1100,
     isOpen: false,
   }
 
