@@ -24,10 +24,15 @@ class Form extends Component {
   }
 
   handleSubmit = e => {
+    const form = e.target
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "contact-form": "contact-form", ...this.state }),
+      body: encode({
+        "contact-form": form.getAttribute("name"),
+        ...this.state,
+      }),
     })
       .then(() =>
         this.setState({
@@ -72,11 +77,11 @@ class Form extends Component {
 
     return (
       <FormStyled
-        onSubmit={this.handleSubmit}
-        method="post"
         name="contact-form"
+        method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        onSubmit={this.handleSubmit}
       >
         <Label htmlFor="userName">Name</Label>
         <Input
@@ -107,8 +112,8 @@ class Form extends Component {
           value={userMessage}
           onChange={handleInput}
         />
-        <input type="hidden" name="contact-form" value="contact-form" />
         {getSubmitBtn()}
+        <input type="hidden" name="form-name" value="contact-form" />
       </FormStyled>
     )
   }
