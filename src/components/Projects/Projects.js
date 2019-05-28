@@ -26,7 +26,7 @@ class Projects extends React.Component {
       {
         title: "Website for a wholesale company",
         keywords: ["all", "websites"],
-        tools: ["Pug", "SCSS", "Webpack", "JavaScript"],
+        tools: ["Pug", "SCSS", "Webpack", "JavaScript", "Zapier"],
         filename: "wholesale.png",
         link: "https://bellababy.ru/",
         code: "https://github.com/yastrebovb/bellababy",
