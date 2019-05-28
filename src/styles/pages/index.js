@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { media } from "../templates/index"
 import Emoji from "../../components/Emoji/Emoji"
-import { shakeHand } from "../animations"
+import { shakeHand, growWidth } from "../animations"
 
 export const Section = styled.section`
   padding: ${({ big }) => (big ? "12rem 1rem" : "6rem 1rem")};
@@ -43,13 +43,24 @@ export const Text = styled.p.attrs(({ maxWidth, margin, size, textAlign }) => ({
 `
 
 export const StyledLink = styled.a`
+  position: relative;
   font-size: 1.8rem;
   font-weight: 500;
   text-decoration: none;
   color: inherit;
 
-  &:hover {
-    text-decoration: underline;
+  &:hover,
+  &:focus {
+    &:after {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: rgb(255, 204, 51);
+      animation: ${growWidth} 0.15s linear;
+      content: "";
+    }
   }
 `
 
