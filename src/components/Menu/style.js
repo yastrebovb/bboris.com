@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { growWidth } from "../../styles/animations"
 
 export const DesktopMenu = styled.nav`
   flex: 1 1 auto;
@@ -14,12 +15,27 @@ export const Logo = styled.p`
 `
 
 export const MenuItem = styled.a`
+  position: relative;
   margin-left: 3.2rem;
   margin-bottom: ${({ mobile }) => (mobile ? "3.6rem" : "initial")};
   color: ${({ mobile }) => (mobile ? "#ffffff" : "initial")};
   font-size: ${({ mobile }) => (mobile ? "2.1rem" : "1.6rem")};
   font-weight: 600;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    &:after {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: rgb(255, 204, 51);
+      animation: ${growWidth} 0.15s linear;
+      content: "";
+    }
+  }
 `
 
 export const StyledMobileMenu = styled.div`
