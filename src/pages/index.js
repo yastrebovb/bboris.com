@@ -18,16 +18,6 @@ import {
 } from "../styles/pages/"
 
 class IndexPage extends React.Component {
-  state = {
-    dateTime: "afternoon",
-  }
-
-  componentDidMount() {
-    this.setState({
-      dateTime: this.getCurrentDateTime(),
-    })
-  }
-
   getCurrentDateTime = () => {
     const currentTime = new Date().getHours()
 
@@ -46,7 +36,8 @@ class IndexPage extends React.Component {
         <SEO title="1" keywords={[`gatsby`, `application`, `react`]} />
         <Section id="home" big>
           <Heading size="big">
-            Good {this.state.dateTime}! <WaveEmoji symbol="👋" label="wave" />
+            Good {this.getCurrentDateTime()}!{" "}
+            <WaveEmoji symbol="👋" label="wave" />
             <br /> My name is Boris and I am front-end developer.
           </Heading>
           <Text maxWidth="76rem" margin="0 auto" textAlign="center">

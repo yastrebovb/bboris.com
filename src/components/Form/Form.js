@@ -27,7 +27,7 @@ class Form extends Component {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "contact-form": "contact", ...this.state }),
+      body: encode({ "contact-form": "contact-form", ...this.state }),
     })
       .then(() =>
         this.setState({
@@ -76,6 +76,7 @@ class Form extends Component {
         method="post"
         name="contact-form"
         data-netlify="true"
+        data-netlify-honeypot="bot-field"
       >
         <Label htmlFor="userName">Name</Label>
         <Input
