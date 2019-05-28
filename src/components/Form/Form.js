@@ -77,6 +77,7 @@ class Form extends Component {
 
     return (
       <FormStyled
+        form-name="contact"
         name="contact"
         method="post"
         action="#"
