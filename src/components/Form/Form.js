@@ -74,7 +74,7 @@ class Form extends Component {
       <FormStyled
         onSubmit={this.handleSubmit}
         method="post"
-        name="c-form"
+        name="contact-form"
         data-netlify="true"
       >
         <Label htmlFor="userName">Name</Label>

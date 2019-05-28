@@ -19,7 +19,7 @@ import {
 
 class IndexPage extends React.Component {
   state = {
-    dateTime: "",
+    dateTime: "afternoon",
   }
 
   componentDidMount() {
