@@ -62,7 +62,12 @@ class Menu extends Component {
             <MenuItem href="#contact" mobile={"true"} onClick={this.closeMenu}>
               Contact
             </MenuItem>
-            <StyledLink onClick={this.closeMenu}>hello@bboris.com</StyledLink>
+            <StyledLink
+              href="mailto:hello@bboris.com?subject=Hey Boris!👋"
+              onClick={this.closeMenu}
+            >
+              hello@bboris.com
+            </StyledLink>
           </MobileMenu>
         </StyledMobileMenu>
       )

@@ -49,17 +49,23 @@ export const StyledLink = styled.a`
   text-decoration: none;
   color: inherit;
 
+  &:after {
+    display: none;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(255, 204, 51);
+    animation: ${growWidth} 0.15s linear;
+    transition: all 0.2s linear;
+    content: "";
+  }
+
   &:hover,
   &:focus {
     &:after {
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: rgb(255, 204, 51);
-      animation: ${growWidth} 0.15s linear;
-      content: "";
+      display: block;
     }
   }
 `
@@ -84,13 +90,30 @@ export const ListItem = styled.li`
   }
 `
 
-export const Email = styled.a`
+export const Email = styled(StyledLink)`
+  position: relative;
   display: block;
   margin: 3rem 0;
   font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
-  text-decoration: underline;
+
+  &:after {
+    display: block;
+    width: 16.5rem;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    margin: 0 auto;
+    background: #000;
+    animation: none;
+  }
+
+  &:hover {
+    &:after {
+      background: rgb(255, 204, 51);
+    }
+  }
 `
 
 export const ProfileWrapper = styled.div`
