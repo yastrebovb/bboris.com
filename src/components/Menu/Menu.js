@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import withSizes from "react-sizes"
 import { slide as MobileMenu } from "react-burger-menu"
 import {
   DesktopMenu,
@@ -11,26 +12,10 @@ import {
 class Menu extends Component {
   state = {
     width: 1100,
-    isOpen: false,
-  }
-
-  componentDidMount() {
-    window.addEventListener("resize", this.updateDimensions)
-    this.setState({ width: window.innerWidth })
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions)
   }
 
   handleStateChange(state) {
     this.setState({ isOpen: state.isOpen })
-  }
-
-  updateDimensions = () => {
-    this.setState({
-      width: window.innerWidth,
-    })
   }
 
   closeMenu = () => {
@@ -40,13 +25,15 @@ class Menu extends Component {
   }
 
   render() {
-    const { width, isOpen } = this.state
+    const { isOpen } = this.state
+    const { isMobile } = this.props
 
-    if (width < 1024) {
+    if (isMobile) {
       return (
         <StyledMobileMenu>
           <MobileMenu
             right
+            disableAutoFocus
             isOpen={isOpen}
             onStateChange={state => this.handleStateChange(state)}
           >
@@ -86,4 +73,8 @@ class Menu extends Component {
   }
 }
 
-export default Menu
+const mapSizesToProps = ({ width }) => ({
+  isMobile: width < 768,
+})
+
+export default withSizes(mapSizesToProps)(Menu)
