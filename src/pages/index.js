@@ -23,7 +23,7 @@ class IndexPage extends React.Component {
 
     if (currentTime >= 0 && currentTime < 12) {
       return "morning"
-    } else if (currentTime > 12 && currentTime < 19) {
+    } else if (currentTime >= 12 && currentTime < 19) {
       return "afternoon"
     } else {
       return "evening"
