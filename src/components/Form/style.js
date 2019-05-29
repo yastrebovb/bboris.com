@@ -34,6 +34,7 @@ export const Submit = styled(Input)`
   border: 1.5px solid #000;
   border-color: ${({ borderColor }) => (borderColor ? borderColor : "initial")};
   border-radius: 6px;
+  background-color: #fff;
   font-weight: 600;
   text-transform: uppercase;
   transition: all 0.2s linear;
