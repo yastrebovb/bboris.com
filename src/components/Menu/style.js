@@ -6,7 +6,6 @@ export const DesktopMenu = styled.nav`
   display: flex;
   justify-content: flex-end;
   padding: 3.8rem 0;
-  list-style-type: none;
 `
 
 export const Logo = styled.p`
@@ -51,7 +50,7 @@ export const StyledLink = styled.a`
   }
 `
 
-export const StyledMobileMenu = styled.div`
+export const StyledMobileMenu = styled.nav`
   .bm-burger-button {
     position: fixed;
     width: 3rem;
