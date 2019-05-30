@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "bboris.com",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Personal website for Boris Yastrebov - Front-end developer",
+  "version": "1.0.0",
+  "author": "Boris Yastrebov <hello@bboris.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.5.0",
@@ -36,6 +36,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "now-build": "npm run build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
