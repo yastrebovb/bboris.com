@@ -51,7 +51,7 @@ export const StyledLink = styled.a`
   }
 `
 
-export const StyledMobileMenu = styled.nav`
+export const StyledMobileMenu = styled.div`
   .bm-burger-button {
     position: fixed;
     width: 3rem;
