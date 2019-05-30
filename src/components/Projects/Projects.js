@@ -26,7 +26,7 @@ class Projects extends React.Component {
       {
         title: "This website 😁",
         keywords: ["all", "websites"],
-        tools: ["gatsby.js", "react", "styled-components", "netlify"],
+        tools: ["gatsby.js", "react", "styled-components", "now"],
         filename: "bboris.png",
         code: "https://github.com/yastrebovb/bboris.com",
       },

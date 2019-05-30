@@ -6,6 +6,7 @@ export const DesktopMenu = styled.nav`
   display: flex;
   justify-content: flex-end;
   padding: 3.8rem 0;
+  margin-left: auto;
 `
 
 export const Logo = styled.p`
