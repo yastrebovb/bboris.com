@@ -1,6 +1,7 @@
 {
   "version": 2,
-  "name": "bboris.com",
+  "name": "bboris.com - personal website",
+  "alias": "bboris.com",
   "builds": [
     {
       "src": "package.json",
