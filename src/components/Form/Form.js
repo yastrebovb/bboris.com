@@ -1,18 +1,13 @@
 import React, { Component } from "react"
 import { FormStyled, Label, Input, Submit, TextArea } from "./style"
 
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
-}
-
 class Form extends Component {
   state = {
     userName: "",
     userEmail: "",
     userMessage: "",
     status: undefined,
+    sendTo: "hello@bboris.com",
   }
 
   handleInput = e => {
@@ -25,20 +20,15 @@ class Form extends Component {
 
   handleSubmit = e => {
     const form = e.target
+    const formData = new FormData(form)
 
-    fetch("/", {
+    formData.append("_subject", "Contact form submission ✨")
+
+    fetch(`//formspree.io/${this.state.sendTo}`, {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...this.state,
-      }),
+      headers: { "Content-Type": "application/json" },
+      body: this.formDataToJson(formData),
     })
-      .then(() =>
-        this.setState({
-          status: "success",
-        })
-      )
       .catch(err => {
         this.setState({
           status: "error",
@@ -46,8 +36,33 @@ class Form extends Component {
 
         console.error(err)
       })
+      .then(res => res.json())
+      .then(response => {
+        if (response.success === "email sent") {
+          this.setState({
+            status: "success",
+          })
+        } else {
+          this.setState({
+            status: "error",
+          })
+        }
+      })
 
     e.preventDefault()
+  }
+
+  formDataToJson = formData => {
+    const entries = formData.entries()
+    const dataObj = Array.from(entries).reduce((data, [key, value]) => {
+      data[key] = value
+      if (key === "email") {
+        data._replyTo = value
+      }
+      return data
+    }, {})
+
+    return JSON.stringify(dataObj)
   }
 
   render() {
@@ -76,13 +91,7 @@ class Form extends Component {
     }
 
     return (
-      <FormStyled
-        name="contact"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        onSubmit={this.handleSubmit}
-      >
+      <FormStyled name="contact" method="post" onSubmit={this.handleSubmit}>
         <Label htmlFor="userName">Name</Label>
         <Input
           type="text"
@@ -113,7 +122,6 @@ class Form extends Component {
           onChange={handleInput}
         />
         {getSubmitBtn()}
-        <input type="hidden" name="form-name" value="contact" />
       </FormStyled>
     )
   }
