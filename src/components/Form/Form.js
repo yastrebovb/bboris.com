@@ -91,7 +91,7 @@ class Form extends Component {
     }
 
     return (
-      <FormStyled name="contact" method="post" onSubmit={this.handleSubmit}>
+      <FormStyled name="contact" method="POST" onSubmit={this.handleSubmit}>
         <Label htmlFor="userName">Name</Label>
         <Input
           type="text"
