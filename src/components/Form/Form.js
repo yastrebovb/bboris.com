@@ -24,7 +24,7 @@ class Form extends Component {
 
     formData.append("_subject", "Contact form submission ✨")
 
-    fetch(`//formspree.io/${this.state.sendTo}`, {
+    fetch(`https://formspree.io/${this.state.sendTo}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: this.formDataToJson(formData),
