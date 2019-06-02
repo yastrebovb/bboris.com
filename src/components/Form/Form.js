@@ -7,7 +7,6 @@ class Form extends Component {
     userEmail: "",
     userMessage: "",
     status: undefined,
-    sendTo: "hello@bboris.com",
   }
 
   handleInput = e => {
@@ -24,11 +23,14 @@ class Form extends Component {
 
     formData.append("_subject", "Contact form submission ✨")
 
-    fetch(`https://formspree.io/${this.state.sendTo}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: this.formDataToJson(formData),
-    })
+    fetch(
+      `https://script.google.com/macros/s/AKfycbyx0ndOpmt3uDGceThSfkSJ9oXeaX2hpZuzpK7kkQ/exec`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: this.formDataToJson(formData),
+      }
+    )
       .catch(err => {
         this.setState({
           status: "error",
@@ -36,17 +38,12 @@ class Form extends Component {
 
         console.error(err)
       })
-      .then(res => res.json())
       .then(response => {
-        if (response.success === "email sent") {
-          this.setState({
-            status: "success",
-          })
-        } else {
-          this.setState({
-            status: "error",
-          })
-        }
+        console.log(response)
+
+        this.setState({
+          status: "success",
+        })
       })
 
     e.preventDefault()

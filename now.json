@@ -2,6 +2,7 @@
   "version": 2,
   "name": "bboris.com - personal website",
   "alias": "bboris.com",
+  "public": false,
   "builds": [
     {
       "src": "package.json",
