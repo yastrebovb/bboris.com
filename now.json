@@ -3,6 +3,9 @@
   "name": "bboris.com - personal website",
   "alias": "bboris.com",
   "public": false,
+  "env": {
+    "ENFORMED_TOKEN": "@enformed_token"
+  },
   "builds": [
     {
       "src": "package.json",

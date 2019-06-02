@@ -23,26 +23,24 @@ class Form extends Component {
 
     formData.append("_subject", "Contact form submission ✨")
 
-    fetch(
-      `https://script.google.com/macros/s/AKfycbyx0ndOpmt3uDGceThSfkSJ9oXeaX2hpZuzpK7kkQ/exec`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: this.formDataToJson(formData),
-      }
-    )
-      .catch(err => {
-        this.setState({
-          status: "error",
-        })
-
-        console.error(err)
-      })
-      .then(response => {
-        console.log(response)
+    fetch(`https://www.enformed.io/${process.env.ENFORMED_TOKEN}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: this.formDataToJson(formData),
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
 
         this.setState({
           status: "success",
+        })
+      })
+      .catch(err => {
+        console.log(err)
+
+        this.setState({
+          status: "error",
         })
       })
 

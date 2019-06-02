@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Boris Yastrebov – Front-end developer`,
@@ -8,6 +12,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        whitelist: ["ENFORMED_TOKEN"],
+      },
+    },
     {
       resolve: `gatsby-plugin-styled-components`,
     },
