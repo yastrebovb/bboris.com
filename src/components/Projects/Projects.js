@@ -9,6 +9,20 @@ class Projects extends React.Component {
     categories: ["all", "websites"],
     projects: [
       {
+        title: "Website for a tech company",
+        keywords: ["all", "websites"],
+        tools: [
+          "Gatby.js",
+          "React",
+          "SCSS",
+          "Intercom",
+          "Google Analytics",
+          "Mailchimp",
+        ],
+        filename: "ally.png",
+        link: "https://www.getally.com/",
+      },
+      {
         title: "News Dashboard",
         keywords: ["all"],
         tools: [
