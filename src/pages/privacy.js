@@ -13,7 +13,7 @@ class PrvacyPage extends React.Component {
         <Normalize />
         <Section id="privacy">
           <Heading size="medium">Terms of Service: Clowny App</Heading>
-          <Text maxWidth="70rem" margin="0 auto">
+          <Text maxWidth="70rem" margin="0 auto" style={{ textAlign: "left" }}>
             <p>
               Boris Yastrebov built the Clowny - Scare Prank app as a Free app.
               This SERVICE is provided by Boris Yastrebov at no cost and is
