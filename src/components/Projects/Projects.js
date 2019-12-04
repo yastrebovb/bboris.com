@@ -18,6 +18,7 @@ class Projects extends React.Component {
           "Intercom",
           "Google Analytics",
           "Mailchimp",
+          "Blog",
         ],
         filename: "ally.png",
         link: "https://www.getally.com/",
@@ -53,6 +54,14 @@ class Projects extends React.Component {
         code: "https://gitlab.com/yastrebovb/trustmyid",
       },
       {
+        title: "Website for a software consultancy",
+        keywords: ["all", "websites"],
+        filename: "trustmyid.png",
+        tools: ["Pug", "Webpack", "SCSS", "Webpack", "JavaScript"],
+        filename: "wavecomputing.png",
+        link: "http://wavecomputing.com/",
+      },
+      {
         title: "Website for a wholesale company",
         keywords: ["all", "websites"],
         tools: ["Pug", "SCSS", "Webpack", "JavaScript", "Google app scripts"],
@@ -77,19 +86,11 @@ class Projects extends React.Component {
           "https://apps.apple.com/us/app/clowny-scare-prank/id1471799698?l=ru&ls=1",
       },
       {
-        title: "AppStore: CelebsApp",
+        title: "AppStore: Celeby",
         keywords: ["all", "apps"],
         tools: ["React-Native", "ios", "Styled-components", "iap"],
         filename: "celebsapp.jpg",
         link: "https://celebschat.com/",
-      },
-      {
-        title: "Forbes List app",
-        keywords: ["all"],
-        tools: ["React", "SCSS", "HTML", "API"],
-        filename: "forbes.png",
-        link: "https://codepen.io/yastrebov/full/axboJg",
-        code: "https://codepen.io/yastrebov/pen/axboJg",
       },
     ],
   }
