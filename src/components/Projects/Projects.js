@@ -88,7 +88,14 @@ class Projects extends React.Component {
       {
         title: "AppStore: Celeby",
         keywords: ["all", "apps"],
-        tools: ["React-Native", "ios", "Styled-components", "iap"],
+        tools: [
+          "React-Native",
+          "ios",
+          "Styled-components",
+          "iap",
+          "push notifications",
+          "analytics",
+        ],
         filename: "celebsapp.jpg",
         link: "https://celebschat.com/",
       },
