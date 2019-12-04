@@ -50,10 +50,10 @@ class Menu extends Component {
               Contact
             </MenuItem>
             <StyledLink
-              href="mailto:hello@bboris.com?subject=Hey Boris!👋"
+              href="mailto:contact.yastrebov@gmail.com?subject=Hey Boris!👋"
               onClick={this.closeMenu}
             >
-              hello@bboris.com
+              contact.yastrebov@gmail.com
             </StyledLink>
           </MobileMenu>
         </StyledMobileMenu>

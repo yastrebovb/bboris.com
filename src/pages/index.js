@@ -1,9 +1,11 @@
-import React from "react"
+import React, { Component } from "react"
+
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/Seo/Seo"
 import Projects from "../components/Projects/Projects"
 import Form from "../components/Form/Form"
 import Image from "../components/Image/Image"
+
 import { Codepen, Github, Twitter, Mail } from "../styles/icons"
 import {
   Section,
@@ -17,7 +19,7 @@ import {
   WaveEmoji,
 } from "../styles/pages/"
 
-class IndexPage extends React.Component {
+class IndexPage extends Component {
   getCurrentDateTime = () => {
     const currentTime = new Date().getHours()
 
@@ -46,8 +48,8 @@ class IndexPage extends React.Component {
             you'll find me searching what to build next, trying to do some
             design or working out in the park.
           </Text>
-          <Email href="mailto:hello@bboris.com?subject=Hey Boris!👋">
-            hello@bboris.com
+          <Email href="mailto:contact.yastrebov@gmail.com?subject=Hey Boris!👋">
+            contact.yastrebov@gmail.com
           </Email>
         </Section>
         <Section id="projects">
@@ -106,7 +108,7 @@ class IndexPage extends React.Component {
             </ListItem>
             <ListItem>
               <Mail />
-              <StyledLink href="https://twitter.com/yastrebovb?lang=en">
+              <StyledLink href="mailto:contact.yastrebov@gmail.com?subject=Hey Boris!👋">
                 E-mail
               </StyledLink>
             </ListItem>

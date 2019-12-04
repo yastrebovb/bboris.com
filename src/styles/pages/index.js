@@ -100,7 +100,7 @@ export const Email = styled(StyledLink)`
 
   &:after {
     display: block;
-    width: 16.5rem;
+    width: 28rem;
     left: 0;
     right: 0;
     bottom: -5px;
