@@ -6,7 +6,7 @@ import { StyledTabs, StyledTabList, ProjectsList } from "./style"
 
 class Projects extends React.Component {
   state = {
-    categories: ["all", "websites"],
+    categories: ["all", "websites", "apps"],
     projects: [
       {
         title: "Website for a tech company",
@@ -45,6 +45,14 @@ class Projects extends React.Component {
         code: "https://github.com/yastrebovb/bboris.com",
       },
       {
+        title: "Website for a tech start-up",
+        keywords: ["all", "websites"],
+        tools: ["Pug", "SCSS", "Webpack", "JavaScript", "Google app scripts"],
+        filename: "trustmyid.png",
+        link: "https://trust-my-id.yastreb.now.sh/",
+        code: "https://gitlab.com/yastrebovb/trustmyid",
+      },
+      {
         title: "Website for a wholesale company",
         keywords: ["all", "websites"],
         tools: ["Pug", "SCSS", "Webpack", "JavaScript", "Google app scripts"],
@@ -53,19 +61,27 @@ class Projects extends React.Component {
         code: "https://github.com/yastrebovb/bellababy",
       },
       {
-        title: "Website for a law firm",
-        keywords: ["all", "websites"],
-        tools: ["CSS", "html", "JavaScript", "Design", "Zapier", "API"],
-        filename: "law.png",
-        link: "https://chattaev.ru/",
-      },
-      {
         title: "Split Bill app",
         keywords: ["all"],
         tools: ["React", "Redux", "Jest", "Styled-components", "Github Pages"],
         filename: "split.png",
         link: "https://yastrebovb.github.io/split-bill/",
         code: "https://github.com/yastrebovb/split-bill",
+      },
+      {
+        title: "AppStore: Clowny",
+        keywords: ["all", "apps"],
+        tools: ["React-Native", "expo", "ios", "Styled-components", "admob"],
+        filename: "clowny.jpg",
+        link:
+          "https://apps.apple.com/us/app/clowny-scare-prank/id1471799698?l=ru&ls=1",
+      },
+      {
+        title: "AppStore: CelebsApp",
+        keywords: ["all", "apps"],
+        tools: ["React-Native", "ios", "Styled-components", "iap"],
+        filename: "celebsapp.jpg",
+        link: "https://celebschat.com/",
       },
       {
         title: "Forbes List app",
