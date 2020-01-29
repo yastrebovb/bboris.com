@@ -24,6 +24,13 @@ class Projects extends React.Component {
         link: "https://www.getally.com/",
       },
       {
+        title: "Website for a crypto project",
+        keywords: ["all", "websites"],
+        tools: ["Gatby.js", "React", "styled-components", "Google Analytics"],
+        filename: "gram.png",
+        link: "https://gram.crypterium.com/",
+      },
+      {
         title: "News Dashboard",
         keywords: ["all"],
         tools: [
